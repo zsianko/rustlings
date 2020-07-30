@@ -7,10 +7,17 @@
 // more than 40 at once, each apple only costs 1! Write a function that calculates
 // the price of an order of apples given the order amount. No hints this time!
 
-// I AM NOT DONE
+const PRICE: i32 = 2;
+const WHOLESALE_PRICE: i32 = 1;
+const WHOLESALE_AMOUNT: i32 = 40;
 
-// Put your function here!
-// fn ..... {
+fn calculate_apple_price(amount: i32) -> i32 {
+    if amount > WHOLESALE_AMOUNT {
+        amount * WHOLESALE_PRICE
+    } else {
+        amount * PRICE
+    }
+}
 
 // Don't modify this function!
 #[test]
